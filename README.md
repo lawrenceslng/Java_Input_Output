@@ -1,6 +1,7 @@
 # README
 
 This project will utilize Java to ingest a CSV file, parse it, convert to usable format (XML) and output usable data to a file. Other functionalities will be added at later phase.
+https://www.w3schools.com/java/java_files.asp
 
 ## Scope
 
