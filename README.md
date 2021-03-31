@@ -12,7 +12,7 @@ This project will use the following:
 - JUnit
 - Spring/Spring boot?
 - Postgresql
-- [Heroku](https://devcenter.heroku.com/categories/java-support)
+- [Heroku](https://devcenter.heroku.com/categories/java-support)/AWS deployment
 - Authentication? (API Key, encryption)
 - Base64 encoding?
 
@@ -26,12 +26,26 @@ This project will use the following:
 
 1. CSV file format:
 ```
-amount, currency, itemID, item, description
+quantity,amount, currency, itemID, category, item, description
 ```
+quantity - int
+amount in minor units
+currency in [ISO_4217](https://en.wikipedia.org/wiki/ISO_4217) format
+category - ENUM (Fruit, Vegetable, Snacks, )
+itemID - 9 digit int (randomly generate for now)
+item - string
+description - string
 2. [XML](https://www.w3schools.com/xml/default.asp)
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-...
+<item category="">
+    <quantity></quantity>
+    <amount></amount>
+    <currency></currency>
+    <itemID></itemID>
+    <item></item>
+    <description></description>
+</itemID>
 ```
 3. [Java.io.File](https://www.w3schools.com/java/java_files.asp)
 4. Java HttpUrlConnection/Java HttpClient
