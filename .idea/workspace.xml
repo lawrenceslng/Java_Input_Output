@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ac3c3e4-da55-4aea-8bc9-2a53eb7beeb1" name="Default Changelist" comment="" />
+    <list default="true" id="4ac3c3e4-da55-4aea-8bc9-2a53eb7beeb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/.idea/modules/Reader.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Reader/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Reader/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Reader/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/Reader/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvToXmlConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlToCsvConverter.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +42,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -38,7 +60,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

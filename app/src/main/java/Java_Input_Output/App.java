@@ -14,13 +14,6 @@ public class App {
      */
     public static void main(String[] args) {
         //What would you like to do?
-
-        //Convert CSV to XML
-        //Please enter your file name:
-        //scanner function, enter file path
-        File filename = null;
-        new CsvToXmlConverter(filename);
-
-        //Convert XML to CSV
+        
     }
 }
