@@ -5,12 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ac3c3e4-da55-4aea-8bc9-2a53eb7beeb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/resources/test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/ReaderFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/WriterFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/CsvReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/CsvReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/Reader" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/Reader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/Java_Input_Output/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/Java_Input_Output/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/Reader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/Writer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +58,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1qSAwlRjKqCDmqjvwzF1oUfrwXy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,13 +79,19 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\OneDrive\Documents\GitHub\Java_Input_Output\resources" />
+      <recent name="C:\Users\alexa\OneDrive\Documents\GitHub\Java_Input_Output" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java_Input_Output.App" />
       <module name="Java_Input_Output.app.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Java_Input_Output.*" />
+          <option name="PATTERN" value="Java_Input_Output.Reader" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
