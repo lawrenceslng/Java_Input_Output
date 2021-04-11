@@ -22,6 +22,5 @@ public class App {
         new CsvToXmlConverter(filename);
 
         //Convert XML to CSV
-
     }
 }
