@@ -13,7 +13,11 @@ public class App {
      * 2. covert XML to CSV
      */
     public static void main(String[] args) {
-        //What would you like to do?
-        
+        //look for file in local directory (test.csv)
+        File inputFile = new File("test.csv");
+        //call Reader on file
+        CsvReader csvReader = new CsvReader(inputFile);
+        //call Writer
+        XmlWriter xmlWriter = new XmlWriter();
     }
 }
