@@ -38,14 +38,16 @@ description - string
 2. [XML](https://www.w3schools.com/xml/default.asp)
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<item category="">
-    <quantity></quantity>
-    <amount></amount>
-    <currency></currency>
-    <itemID></itemID>
-    <item></item>
-    <description></description>
-</itemID>
+<inventory>
+	<shopItem category="">
+		<quantity></quantity>
+		<amount></amount>
+		<currency></currency>
+		<itemID></itemID>
+		<item></item>
+		<description></description>
+	</shopItem>
+</inventory>
 ```
 3. [Java.io.File](https://www.w3schools.com/java/java_files.asp)
 4. Java HttpUrlConnection/Java HttpClient
