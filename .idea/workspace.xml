@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ac3c3e4-da55-4aea-8bc9-2a53eb7beeb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/ReaderFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/WriterFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/CsvReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/classes/java/main/Java_Input_Output/CsvReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/CsvReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/Reader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/Writer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/Java_Input_Output/XmlWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/test.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
