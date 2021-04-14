@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inventory>
+  <shopItem category="snacks">
+    <quantity>10</quantity>
+    <amount>500</amount>
+    <currency>USD</currency>
+    <itemID>123456789</itemID>
+    <item>pringles</item>
+    <description>'so stackable'</description>
+  </shopItem>
+  <shopItem category="meats">
+    <quantity>5</quantity>
+    <amount>100</amount>
+    <currency>USD</currency>
+    <itemID>987654321</itemID>
+    <item> chicken</item>
+    <description>'lean chicken'</description>
+  </shopItem>
+  <shopItem category="grains">
+    <quantity>7</quantity>
+    <amount>1000</amount>
+    <currency>USD</currency>
+    <itemID>918273645</itemID>
+    <item>bread</item>
+    <description>'whole wheat'</description>
+  </shopItem>
+</inventory>

@@ -26,12 +26,12 @@ This project will use the following:
 
 1. CSV file format:
 ```
-quantity,amount, currency, itemID, category, item, description
+category, quantity, amount, currency, itemID, item, description
 ```
+category - ENUM (Fruit, Vegetable, Snacks, etc)
 quantity - int
 amount in minor units
 currency in [ISO_4217](https://en.wikipedia.org/wiki/ISO_4217) format
-category - ENUM (Fruit, Vegetable, Snacks, )
 itemID - 9 digit int (randomly generate for now)
 item - string
 description - string

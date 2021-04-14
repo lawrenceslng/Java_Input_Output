@@ -19,6 +19,7 @@ public class App {
         CsvReader csvReader = new CsvReader(inputFile);
         System.out.println("Reading CSV File");
         csvReader.read();
+//        csvReader.validateHeaders(csvReader.getHeaders(),csvReader.getContent());
         //call Writer
         System.out.println(csvReader.getHeaders());
         XmlWriter xmlWriter = new XmlWriter();

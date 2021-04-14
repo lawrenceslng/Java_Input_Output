@@ -31,8 +31,27 @@ public abstract class ReaderFile {
         }
     }
 
+//    protected boolean validateHeaders(List<String> headers){
+//        for(int i = 0; i < headers.size(); i++){
+//            if(){
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+
     public String toString(){
         return headers.toString() + content.toString();
+    }
+
+    private enum headerList{
+        category,
+        quantity,
+        amount,
+        currency,
+        itemID,
+        item,
+        description
     }
 
 }

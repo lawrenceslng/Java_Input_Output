@@ -1,4 +1,4 @@
-quantity,amount,currency,itemID,category,item,description
-10,500,USD,123456789,snacks,pringles,'so stackable'
-5,100,USD,987654321,meats,chicken,'lean chicken'
-7,1000,USD,918273645,grains,bread,'whole wheat'
+category,quantity,amount,currency,itemID,item,description
+snacks,10,500,USD,123456789,pringles,'so stackable'
+meats,5,100,USD,987654321,chicken,'lean chicken'
+grains,7,1000,USD,918273645,bread,'whole wheat'
