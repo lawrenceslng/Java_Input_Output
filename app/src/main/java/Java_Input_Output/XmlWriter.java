@@ -6,7 +6,6 @@ package Java_Input_Output;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-
 import javax.xml.parsers.*;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
@@ -14,46 +13,28 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class XmlWriter extends WriterFile{
 
-    //sub array list of csv content
-    private List<String> subContent;
     private File xmlFile;
+
     @Override
     public void writer() {
         try {
-            DocumentBuilderFactory dbFactory =
-                    DocumentBuilderFactory.newInstance();
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.newDocument();
 
-            // root element
             Element rootElement = doc.createElement("inventory");
             doc.appendChild(rootElement);
 
-//            System.out.println("headers: " + this.getHeaders().toString());
-//            System.out.println("content: " + this.getContent().toString());
-            //begin loop through arrayLists
-            int contentSize = this.getContent().size()/this.getHeaders().size();
-            int start = 0;
-            int end = this.getHeaders().size();
-            for(int i = 0; i < contentSize; i++) {
-                subContent = this.getContent().subList(start,end);
-                rootElement.appendChild(createElement(this.getHeaders(), subContent, doc));
-                start = end;
-                end+=this.getHeaders().size();
+            for(int i = 0; i < getShopItems().size(); i++) {
+                rootElement.appendChild(createElement(getShopItems().get(i), doc));
             }
-            //end loop through arrayLists
-            System.out.println(rootElement.toString());
-            System.out.println(rootElement.getChildNodes().toString());
 
             // write the content into xml file - this is done after looping through all content of list
             xmlFile = new File("inventory.xml");
-            //FileOutputStream outputStream = new FileOutputStream(xmlFile);
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
@@ -70,30 +51,24 @@ public class XmlWriter extends WriterFile{
         }
     }
 
-//<?xml version="1.0" encoding="UTF-8"?>
-//<inventory>
-//	<shopItem category="">
-//		<quantity></quantity>
-//		<amount></amount>
-//		<currency></currency>
-//		<itemID></itemID>
-//		<item></item>
-//		<description></description>
-//	</shopItem>
-//</inventory>
+    private Element createElement(ShopItem shopItemObj, Document doc){
 
-    private static Element createElement(List<String> headers, List<String> content, Document doc){
         Element shopItem = doc.createElement("shopItem");
-        //create root element first - shopItem
-        Attr attr = doc.createAttribute(headers.get(0));
-        attr.setValue(content.get(0));
-        shopItem.setAttributeNode(attr);
 
-        for(int i=1; i < headers.size(); i++){
-            Element itemElement = doc.createElement(headers.get(i));
-            itemElement.setTextContent(content.get(i));
-            //System.out.println("item element: " + itemElement.getTextContent());
-            shopItem.appendChild(itemElement);
+        HashMap<String,String> shopItemMap = shopItemObj.generateShopItemHashMap();
+
+        //sort this as it will loop through hash map in a random order, so that XML is in a specific order
+        for (HashMap.Entry<String,String> entry : shopItemMap.entrySet()) {
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+            if(entry.getKey().equals("category")){
+                Attr attr = doc.createAttribute(entry.getKey());
+                attr.setValue(entry.getValue());
+                shopItem.setAttributeNode(attr);
+            } else {
+                Element itemElement = doc.createElement(entry.getKey());
+                itemElement.setTextContent(entry.getValue());
+                shopItem.appendChild(itemElement);
+            }
         }
         return shopItem;
     }

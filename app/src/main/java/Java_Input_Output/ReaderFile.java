@@ -1,6 +1,5 @@
 package Java_Input_Output;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +7,7 @@ public abstract class ReaderFile {
 
     private List<String> headers = new ArrayList<>();
     private List<String> content = new ArrayList<>();
+    private List<ShopItem> shopItems = new ArrayList<ShopItem>();
 
     public abstract void read();
 
@@ -31,27 +31,26 @@ public abstract class ReaderFile {
         }
     }
 
-//    protected boolean validateHeaders(List<String> headers){
-//        for(int i = 0; i < headers.size(); i++){
-//            if(){
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
+    public List<ShopItem> getShopItems() {
+        return shopItems;
+    }
+
+    public void setShopItems(List<ShopItem> shopItems){
+        this.shopItems = shopItems;
+    }
+
+
+    public void addShopItems(ShopItem shopItem) {
+        this.shopItems.add(shopItem);
+    }
+
+    public void removeShopItems(ShopItem shopItem) {
+        this.shopItems.remove(shopItem);
+    }
+
 
     public String toString(){
         return headers.toString() + content.toString();
-    }
-
-    private enum headerList{
-        category,
-        quantity,
-        amount,
-        currency,
-        itemID,
-        item,
-        description
     }
 
 }

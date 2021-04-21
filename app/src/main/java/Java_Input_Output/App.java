@@ -4,6 +4,7 @@
 package Java_Input_Output;
 
 import java.io.File;
+import java.util.Arrays;
 
 public class App {
 
@@ -18,13 +19,17 @@ public class App {
         //call Reader on file
         CsvReader csvReader = new CsvReader(inputFile);
         System.out.println("Reading CSV File");
-        csvReader.read();
-//        csvReader.validateHeaders(csvReader.getHeaders(),csvReader.getContent());
+        try{
+            csvReader.read();
+        }
+        catch(Exception e){
+            return;
+        }
         //call Writer
         System.out.println(csvReader.getHeaders());
         XmlWriter xmlWriter = new XmlWriter();
         xmlWriter.setHeaders(csvReader.getHeaders());
-        xmlWriter.setContent(csvReader.getContent());
+        xmlWriter.setShopItems(csvReader.getShopItems());
         xmlWriter.writer();
     }
 }

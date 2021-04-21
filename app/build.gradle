@@ -28,3 +28,14 @@ application {
     // Define the main class for the application.
     mainClass = 'Java_Input_Output.App'
 }
+
+jar {
+    manifest {
+        attributes "Main-Class": "Java_Input_Output.App"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
