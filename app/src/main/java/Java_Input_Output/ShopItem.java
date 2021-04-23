@@ -34,7 +34,7 @@ public class ShopItem {
             this.category = Category.valueOf(content.get(0).toUpperCase());
             this.quantity = Integer.parseInt(content.get(1));
             this.amount = Integer.parseInt(content.get(2));
-            this.currency = Currency.valueOf(content.get(3));
+            this.currency = Currency.valueOf(content.get(3).toUpperCase());
             this.itemID = Integer.parseInt(content.get(4));
             this.item = content.get(5);
             this.description = content.get(6);
