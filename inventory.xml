@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <inventory>
-  <shopItem category="snacks">
+  <shopItem category="SNACKS">
     <itemID>123456789</itemID>
     <amount>500</amount>
     <item>pringles</item>
@@ -8,7 +8,7 @@
     <description>'so stackable'</description>
     <currency>USD</currency>
   </shopItem>
-  <shopItem category="meats">
+  <shopItem category="MEATS">
     <itemID>987654321</itemID>
     <amount>100</amount>
     <item>chicken</item>
@@ -16,7 +16,7 @@
     <description>'lean chicken'</description>
     <currency>USD</currency>
   </shopItem>
-  <shopItem category="grains">
+  <shopItem category="GRAINS">
     <itemID>918273645</itemID>
     <amount>1000</amount>
     <item>bread</item>

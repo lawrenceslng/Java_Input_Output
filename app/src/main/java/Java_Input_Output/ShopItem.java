@@ -1,6 +1,7 @@
 package Java_Input_Output;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -8,7 +9,7 @@ enum Currency{
     USD, GBP, EUR;
 }
 enum Category{
-    snacks, meats, grains;
+    SNACKS, MEATS, GRAINS;
 }
 
 public class ShopItem {
@@ -23,11 +24,14 @@ public class ShopItem {
 
     public ShopItem(List<String> content) throws Exception {
 
-        if(content.get(1).isEmpty() || content.get(2).isEmpty() || content.get(5).isEmpty()){
+        if(content.get(1).isEmpty() || content.get(2).isEmpty() || content.get(4).isEmpty() || content.get(5).isEmpty()){
             throw new Exception("error with blank values");
         }
+        if(!Arrays.stream(Currency.values()).anyMatch(e -> e.name().equals(content.get(3).toUpperCase())) || !Arrays.stream(Category.values()).anyMatch(e -> e.name().equals(content.get(0).toUpperCase()))){
+            throw new Exception("error with enum values");
+        }
         try {
-            this.category = Category.valueOf(content.get(0));
+            this.category = Category.valueOf(content.get(0).toUpperCase());
             this.quantity = Integer.parseInt(content.get(1));
             this.amount = Integer.parseInt(content.get(2));
             this.currency = Currency.valueOf(content.get(3));
@@ -36,6 +40,7 @@ public class ShopItem {
             this.description = content.get(6);
         } catch(IllegalArgumentException e){
             System.out.println("value is not correct");
+            System.exit(1);
         }
     }
 

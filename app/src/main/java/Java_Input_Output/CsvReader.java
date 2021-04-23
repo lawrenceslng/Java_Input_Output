@@ -44,8 +44,8 @@ public class CsvReader extends ReaderFile{
             System.exit(1);
             return;
         }
-        System.out.println("Headers: " + getHeaders().toString());
-        System.out.println("ShopItem toString method: " + getShopItems().get(0).toString());
-        System.out.println("ReaderFile toString method: " + toString());
+//        System.out.println("Headers: " + getHeaders().toString());
+//        System.out.println("ShopItem toString method: " + getShopItems().get(0).toString());
+//        System.out.println("ReaderFile toString method: " + toString());
     }
 }
