@@ -1,0 +1,4 @@
+category,quantity,amount,currency,itemID,item,description
+SNACKS,10,500,USD,123456789,pringles,so stackable
+MEATS,5,100,USD,987654321,chicken,lean chicken
+GRAINS,7,1000,USD,918273645,bread,whole wheat

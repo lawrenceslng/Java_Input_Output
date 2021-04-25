@@ -1,5 +1,6 @@
 package Java_Input_Output;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public abstract class WriterFile {
     private List<String> content = new ArrayList<>();
     private List<ShopItem> shopItems = new ArrayList<ShopItem>();
 
-    public abstract void writer();
+    public abstract void writer() throws IOException;
 
     protected List<String> getHeaders() {
         return headers;
