@@ -8,6 +8,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.*;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -100,13 +101,11 @@ public class XmlReader extends ReaderFile{
                         System.out.println("ItemID: " + new String(ch, start, length));
                         contentArr[4] = placeholder;
                         bItemID = false;
-                    }
-                    else if (bItem) {
+                    } else if (bItem) {
                         System.out.println("Item: " + new String(ch, start, length));
                         contentArr[5] = placeholder;
                         bItem = false;
-                    }
-                    else if (bDescription) {
+                    } else if (bDescription) {
                         System.out.println("Description: " + new String(ch, start, length));
                         contentArr[6] = placeholder;
                         bDescription = false;
