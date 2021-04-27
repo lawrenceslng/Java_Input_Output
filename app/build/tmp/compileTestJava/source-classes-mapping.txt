@@ -1,2 +1,6 @@
+Java_Input_Output/ShopItemTest.java
+ Java_Input_Output.ShopItemTest
 Java_Input_Output/AppTest.java
  Java_Input_Output.AppTest
+Java_Input_Output/CsvReaderTest.java
+ Java_Input_Output.CsvReaderTest
