@@ -26,7 +26,7 @@ public class CsvReaderTest {
         Assertions.assertEquals("[category, quantity, amount, currency, itemID, item, description]",csvReader.getHeaders().toString());
         //Assert.assertEquals("[category, quantity, amount, currency, itemID, item, description]",csvReader.getHeaders().toString());
 
-        csvFile = new File("resources\\testShopItem.csv");
+        csvFile = new File("resources\\testShopItem.csv"); //< this is not doing anything??
         //Test ShopItems
         List<String> content1 = Arrays.asList("snacks","10","500","USD","123456789","pringles","'so stackable'");
         List<ShopItem> shopItemList = new ArrayList<>();
