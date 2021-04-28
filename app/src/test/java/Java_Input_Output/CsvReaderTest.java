@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +15,11 @@ public class CsvReaderTest {
     private File csvFile;
     @Test
     public void read() throws Exception {
-        csvFile = new File("C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Java_Input_Output\\app\\src\\test\\resources\\testHeader.csv");
+        String fileDirectory = Paths.get("")
+                .toAbsolutePath()
+                .toString();
+        fileDirectory = fileDirectory + "\\src\\test\\resources\\testHeader.csv";
+        csvFile = new File(fileDirectory);
         CsvReader csvReader = new CsvReader(csvFile);
         //Test Headers
         csvReader.read();
@@ -34,7 +39,5 @@ public class CsvReaderTest {
         ShopItem shopItem3 = new ShopItem(content3);
         shopItemList.add(shopItem3);
         Assertions.assertEquals(shopItemList.toString(),csvReader.getShopItems().toString());
-
-
     }
 }
