@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Reading CSV Files</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p>Contents of your CSV File</p>
+<p th:text="'Category: ' + ${category}" />
+<p th:text="'Quantity: ' + ${quantity}" />
+<p th:text="'Amount: ' + ${amount}" />
+<p th:text="'Currency: ' + ${currency}" />
+<p th:text="'Item ID: ' + ${itemID}" />
+<p th:text="'Item: ' + ${item}" />
+<p th:text="'Description: ' + ${description}" />
+<p></p>
+<p>Write your contents to <a href="/writeXml">XML</a></p>
+</body>
+</html>

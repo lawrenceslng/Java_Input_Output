@@ -4,6 +4,8 @@ Java_Input_Output/ShopItem.java
  Java_Input_Output.Category
  Java_Input_Output.Currency
  Java_Input_Output.ShopItem
+Java_Input_Output/WriterFile.java
+ Java_Input_Output.WriterFile
 Java_Input_Output/CsvWriter.java
  Java_Input_Output.CsvWriter
 Java_Input_Output/CsvReader.java
@@ -15,5 +17,5 @@ Java_Input_Output/App.java
  Java_Input_Output.App
 Java_Input_Output/ReaderFile.java
  Java_Input_Output.ReaderFile
-Java_Input_Output/WriterFile.java
- Java_Input_Output.WriterFile
+Java_Input_Output/controller/AppController.java
+ Java_Input_Output.controller.AppController

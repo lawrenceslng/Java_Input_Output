@@ -3,10 +3,13 @@
  */
 package Java_Input_Output;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
+@SpringBootApplication
 public class App {
 
     /*
@@ -16,6 +19,7 @@ public class App {
      */
     public static void main(String[] args) throws IOException {
         //look for file in local directory (test.csv)
+        SpringApplication.run(App.class, args);
         File inputFile = new File("resources\\test.xml");
         String fileType = inputFile.getName().substring(inputFile.getName().length()-3);
         if(fileType.equals("csv")){
