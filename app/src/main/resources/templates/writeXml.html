@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<textarea rows="20" cols="40" style="border:none;">
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+<inventory>
+    <shopItem category=${category}>
+        <itemID>${itemID}</itemID>
+        <amount>${amount}</amount>
+        <item>${item}</item>
+        <quantity>${quantity}</quantity>
+        <description>${description}</description>
+        <currency>${currency}</currency>
+    </shopItem>
+    <shopItem category="MEATS">
+        <itemID>987654321</itemID>
+        <amount>100</amount>
+        <item>chicken</item>
+        <quantity>5</quantity>
+        <description>'lean chicken'</description>
+        <currency>USD</currency>
+    </shopItem>
+    <shopItem category="GRAINS">
+        <itemID>918273645</itemID>
+        <amount>1000</amount>
+        <item>bread</item>
+        <quantity>7</quantity>
+        <description>'whole wheat'</description>
+        <currency>USD</currency>
+    </shopItem>
+</inventory>
+</textarea>
 </body>
 </html>

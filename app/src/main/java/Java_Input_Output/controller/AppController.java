@@ -15,11 +15,6 @@ import java.io.File;
 @Controller
 public class AppController {
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
-    }
 
     @RequestMapping("/index")
     public String getApp(){
@@ -31,9 +26,15 @@ public class AppController {
         return "This is the main section of our Java App";
     }
 
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "greeting";
+    }
+
     //for testing purposes, will create mappings for reading and writing out in the open, and just navigate to see it display in a web browser.
     @GetMapping("/readCsv")
-    public String readCsv(){
+    public String readCsv(Model model){
         //create the file (this will be imported later on
         File csvFile = new File("resources\\test.csv");
         //read the csv file
@@ -42,8 +43,10 @@ public class AppController {
         ShopItem shopItemOne = csvReader.getShopItems().get(0);
         //add the contents of the csv file to a model object to display in html template
         //doesn't seem like the below works. not sure how to add data from read method into html
-        Model model = new ConcurrentModel();
+        String name = "Alex";
+        model.addAttribute("name", name);
         model.addAttribute("category", shopItemOne.getCategory());
+        System.out.println("category of shopitem: " + shopItemOne.getCategory());
         model.addAttribute("quantity", shopItemOne.getQuantity());
         model.addAttribute("amount", shopItemOne.getAmount());
         model.addAttribute("currency", shopItemOne.getCurrency());
@@ -52,6 +55,30 @@ public class AppController {
         model.addAttribute("description", shopItemOne.getDescription());
         System.out.println("Println in read csv");
         return "readCSV";
+    }
+
+    @GetMapping("/writeXml")
+    public String writeXml(Model model){
+        //create the file (this will be imported later on
+        File csvFile = new File("resources\\test.csv");
+        //read the csv file
+        CsvReader csvReader = new CsvReader(csvFile);
+        csvReader.read();
+        ShopItem shopItemOne = csvReader.getShopItems().get(0);
+        //add the contents of the csv file to a model object to display in html template
+        //doesn't seem like the below works. not sure how to add data from read method into html
+        String name = "Alex";
+        model.addAttribute("name", name);
+        model.addAttribute("category", shopItemOne.getCategory());
+        System.out.println("category of shopitem: " + shopItemOne.getCategory());
+        model.addAttribute("quantity", shopItemOne.getQuantity());
+        model.addAttribute("amount", shopItemOne.getAmount());
+        model.addAttribute("currency", shopItemOne.getCurrency());
+        model.addAttribute("itemID", shopItemOne.getItemID());
+        model.addAttribute("item", shopItemOne.getItem());
+        model.addAttribute("description", shopItemOne.getDescription());
+        System.out.println("Println in read csv");
+        return "writeXml";
     }
 
 
