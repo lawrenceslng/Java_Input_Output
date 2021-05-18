@@ -16,14 +16,6 @@
     </form>
 
     <p th:text="'Hello, ' + ${name} + '!'" />
-    <p>Contents of your CSV File</p>
-<!--    <p th:text="'Category: ' + ${category}" />-->
-<!--    <p th:text="'Quantity: ' + ${quantity}" />-->
-<!--    <p th:text="'Amount: ' + ${amount}" />-->
-<!--    <p th:text="'Currency: ' + ${currency}" />-->
-<!--    <p th:text="'Item ID: ' + ${itemID}" />-->
-<!--    <p th:text="'Item: ' + ${item}" />-->
-<!--    <p th:text="'Description: ' + ${description}" />-->
     <table class="table table-dark">
         <thead>
         <tr>
@@ -36,17 +28,6 @@
             <th scope="col">Description</th>
         </tr>
         </thead>
-        <tbody>
-        <tr th:each="shopItem: ${shopItem}">
-            <td th:text="${shopItem.category}"/>
-            <td th:text="${shopItem.quantity}"/>
-            <td th:text="${shopItem.amount}"/>
-            <td th:text="${shopItem.currency}"/>
-            <td th:text="${shopItem.itemID}"/>
-            <td th:text="${shopItem.item}"/>
-            <td th:text="${shopItem.description}"/>
-        </tr>
-        </tbody>
     </table>
     <p></p>
     <p>Write your contents to <a href="/writeXml">XML</a></p>

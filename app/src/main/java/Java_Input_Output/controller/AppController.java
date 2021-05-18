@@ -39,7 +39,6 @@ public class AppController {
         //read the csv file
         CsvReader csvReader = new CsvReader(csvFile);
         csvReader.read();
-        ShopItem shopItemOne = csvReader.getShopItems().get(0);
         //add the contents of the csv file to a model object to display in html template
         //doesn't seem like the below works. not sure how to add data from read method into html
         String username = "Alex";
@@ -56,6 +55,17 @@ public class AppController {
         System.out.println("Println in read csv");
         return "readCSV";
     }
+    @RequestMapping(value= "/uploadCsv", method={RequestMethod.GET, RequestMethod.POST})
+    public String uploadCsv(Model model){
+
+        //add the contents of the csv file to a model object to display in html template
+        //doesn't seem like the below works. not sure how to add data from read method into html
+        String username = "Alex";
+        model.addAttribute("name", username);
+        System.out.println("Println in upload csv");
+        return "uploadCSV";
+    }
+
 
     @GetMapping("/writeXml")
     public String writeXml(Model model){
