@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 @Controller
 public class AppController {
@@ -35,42 +36,32 @@ public class AppController {
     @RequestMapping(value= "/readCsv", method={RequestMethod.GET, RequestMethod.POST})
     public String readCsv(Model model){
         //create the file (this will be imported later on
-        File csvFile = new File("uploads\\test.csv");
+        File csvFile = new File("C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Java_Input_Output\\app\\src\\main\\resources\\static\\uploads\\test.csv");
         //read the csv file
         CsvReader csvReader = new CsvReader(csvFile);
         csvReader.read();
         //add the contents of the csv file to a model object to display in html template
-        //doesn't seem like the below works. not sure how to add data from read method into html
         String username = "Alex";
         model.addAttribute("name", username);
-//        model.addAttribute("category", shopItemOne.getCategory());
-//        System.out.println("category of shopitem: " + shopItemOne.getCategory());
-//        model.addAttribute("quantity", shopItemOne.getQuantity());
-//        model.addAttribute("amount", shopItemOne.getAmount());
-//        model.addAttribute("currency", shopItemOne.getCurrency());
-//        model.addAttribute("itemID", shopItemOne.getItemID());
-//        model.addAttribute("item", shopItemOne.getItem());
-//        model.addAttribute("description", shopItemOne.getDescription());
-        model.addAttribute("shopItem", csvReader.getShopItems());
+        model.addAttribute("shopItems", csvReader.getShopItems());
+
         System.out.println("Println in read csv");
         return "readCSV";
     }
     @RequestMapping(value= "/uploadCsv", method={RequestMethod.GET, RequestMethod.POST})
     public String uploadCsv(Model model){
 
-        //add the contents of the csv file to a model object to display in html template
-        //doesn't seem like the below works. not sure how to add data from read method into html
         String username = "Alex";
         model.addAttribute("name", username);
         System.out.println("Println in upload csv");
         return "uploadCSV";
     }
 
-
     @GetMapping("/writeXml")
     public String writeXml(Model model){
         //create the file (this will be imported later on
-        File csvFile = new File("uploads\\test.csv");
+        //File csvFile = new File("C:\\Users\\alexa\\OneDrive\\Documents\\GitHub\\Java_Input_Output\\app\\src\\main\\resources\\static\\uploads\\test.xml");
+        File csvFile = new File("resources\\test.xml");
         //read the csv file
         CsvReader csvReader = new CsvReader(csvFile);
         csvReader.read();

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
 <head>
     <title>Reading CSV Files</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -8,41 +11,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <p th:text="'Hello, ' + ${name} + '!'" />
-    <p>Contents of your CSV File</p>
-<!--    <p th:text="'Category: ' + ${category}" />-->
-<!--    <p th:text="'Quantity: ' + ${quantity}" />-->
-<!--    <p th:text="'Amount: ' + ${amount}" />-->
-<!--    <p th:text="'Currency: ' + ${currency}" />-->
-<!--    <p th:text="'Item ID: ' + ${itemID}" />-->
-<!--    <p th:text="'Item: ' + ${item}" />-->
-<!--    <p th:text="'Description: ' + ${description}" />-->
-    <table class="table table-dark">
-        <thead>
-        <tr>
-            <th scope="col">Category</th>
-            <th scope="col">Quantity</th>
-            <th scope="col">Amount</th>
-            <th scope="col">Currency</th>
-            <th scope="col">Item ID</th>
-            <th scope="col">Item</th>
-            <th scope="col">Description</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="shopItem: ${shopItem}">
-            <td th:text="${shopItem.category}"/>
-            <td th:text="${shopItem.quantity}"/>
-            <td th:text="${shopItem.amount}"/>
-            <td th:text="${shopItem.currency}"/>
-            <td th:text="${shopItem.itemID}"/>
-            <td th:text="${shopItem.item}"/>
-            <td th:text="${shopItem.description}"/>
-        </tr>
-        </tbody>
-    </table>
-    <p></p>
-    <p>Write your contents to <a href="/writeXml">XML</a></p>
+    <div layout:fragment="content">
+        <p th:text="'Hello, ' + ${name} + '!'" />
+        <p>Contents of your CSV File</p>
+        <table class="table table-dark">
+            <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Currency</th>
+                <th scope="col">Item ID</th>
+                <th scope="col">Item</th>
+                <th scope="col">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="shopItem: ${shopItems}">
+                <td th:text="${shopItem.category}"/>
+                <td th:text="${shopItem.quantity}"/>
+                <td th:text="${shopItem.amount}"/>
+                <td th:text="${shopItem.currency}"/>
+                <td th:text="${shopItem.itemID}"/>
+                <td th:text="${shopItem.item}"/>
+                <td th:text="${shopItem.description}"/>
+            </tr>
+            </tbody>
+        </table>
+        <p></p>
+        <p>Write your contents to <a href="/writeXml">XML</a></p>
+    </div>
 </body>
 </html>

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<div layout:fragment="content">
 <textarea rows="20" cols="40" style="border:none;">
     <?xml version="1.0" encoding="ISO-8859-1"?>
 <inventory>
@@ -34,5 +38,6 @@
     </shopItem>
 </inventory>
 </textarea>
+</div>
 </body>
 </html>
