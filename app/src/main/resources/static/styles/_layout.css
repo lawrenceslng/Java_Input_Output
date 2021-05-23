@@ -1,4 +1,4 @@
-.b-example-divider {
+/* .b-example-divider {
   height: 3rem;
   background-color: rgba(0, 0, 0, .1);
   border: solid rgba(0, 0, 0, .15);
@@ -119,4 +119,14 @@ main {
 }
 
 .fw-semibold { font-weight: 600; }
-.lh-tight { line-height: 1.25; }
+.lh-tight { line-height: 1.25; } */
+
+.header
+{
+  text-align: right;
+}
+
+.menu
+{
+  padding-top: 50%;
+}

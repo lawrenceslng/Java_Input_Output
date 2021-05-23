@@ -16,14 +16,25 @@ import java.util.ArrayList;
 public class AppController {
 
 
-    @RequestMapping(value="/index", method={RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value="/", method={RequestMethod.GET, RequestMethod.POST})
     public String getApp(){
 
         //from here, we want to access the different methods we have. Should these be their own methods within this app controller, or should
         //each different reader or writer have their own controller which handles getting the methods used for file conversion?
         //ex:
         //CsvReaderController.getRead();
-        return "This is the main section of our Java App";
+        return "login";
+    }
+
+    @RequestMapping(value="/home", method={RequestMethod.GET, RequestMethod.POST})
+    public String home(@RequestParam(name="User", required = false, defaultValue = "User") String username){
+        return "home";
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestParam("name") String name){
+
+        return "redirect:/home";
     }
 
     @GetMapping("/greeting")
