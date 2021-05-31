@@ -23,17 +23,22 @@ public class AppController {
         //each different reader or writer have their own controller which handles getting the methods used for file conversion?
         //ex:
         //CsvReaderController.getRead();
+        System.out.println("hitting /");
         return "login";
     }
 
     @RequestMapping(value="/home", method={RequestMethod.GET, RequestMethod.POST})
-    public String home(@RequestParam(name="User", required = false, defaultValue = "User") String username){
+    public String home(@RequestParam(name="name", required = false, defaultValue = "User") String username, Model model){
+        System.out.println(username);
+        model.addAttribute("name", username);
         return "home";
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam("name") String name){
-
+    public String login(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model){
+        System.out.println(name);
+        model.addAttribute("name", name);
+        System.out.println("hitting /login");
         return "redirect:/home";
     }
 

@@ -20,7 +20,7 @@ public class App {
     public static void main(String[] args) throws IOException {
         //look for file in local directory (test.csv)
         SpringApplication.run(App.class, args);
-        File inputFile = new File("resources\\test.xml");
+        File inputFile = new File("resources/test.xml");
         String fileType = inputFile.getName().substring(inputFile.getName().length()-3);
         if(fileType.equals("csv")){
             //call Reader on file
