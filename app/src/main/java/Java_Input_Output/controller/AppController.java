@@ -2,6 +2,7 @@ package Java_Input_Output.controller;
 
 import Java_Input_Output.CsvReader;
 import Java_Input_Output.ShopItem;
+import Java_Input_Output.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ConcurrentModel;
 import org.springframework.ui.Model;
@@ -39,6 +40,9 @@ public class AppController {
         System.out.println(name);
         model.addAttribute("name", name);
         System.out.println("hitting /login");
+        User user = new User();
+        user.setUsername(name);
+        System.out.println("new user is: " + user.getUsername());
         return "redirect:/home";
     }
 

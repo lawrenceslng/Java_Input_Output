@@ -9,17 +9,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
           crossorigin="anonymous">
-
+    <style>
+        .login-module{
+            margin: 150px 0;
+            
+        }
+        .col{
+            border: 3px gray solid;
+            border-radius: 15px;
+            min-height: 400px;
+            /* background-color: gray; */
+        }
+        .mb{
+            padding: 0 15%;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-    <div class="row">
-        <div class="col vh-100">
-            <div class="mb-3">
+    <div class="row login-module align-items-center">
+        <div class="col">
+            <div class="mb d-flex justify-content-center">
                 <form th:action="@{/login}" method="post" enctype="multipart/form-data">
                     <label for="exampleFormControlInput1" class="form-label">Username</label>
                     <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="User">
-                    <br>
                     <br>
                     <button type="submit" class="btn btn-primary mb-3">Login</button>
                 </form>

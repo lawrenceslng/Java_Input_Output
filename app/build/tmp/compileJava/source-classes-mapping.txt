@@ -17,5 +17,7 @@ Java_Input_Output/WriterFile.java
  Java_Input_Output.WriterFile
 Java_Input_Output/ReaderFile.java
  Java_Input_Output.ReaderFile
+Java_Input_Output/User.java
+ Java_Input_Output.User
 Java_Input_Output/controller/AppController.java
  Java_Input_Output.controller.AppController
