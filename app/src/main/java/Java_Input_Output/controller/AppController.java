@@ -8,17 +8,23 @@ import org.springframework.ui.ConcurrentModel;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.support.RequestContextUtils;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class AppController {
 
 
-    @RequestMapping(value="/", method={RequestMethod.GET, RequestMethod.POST})
+    @GetMapping(value="/")
     public String getApp(Model model){
 
         //from here, we want to access the different methods we have. Should these be their own methods within this app controller, or should
@@ -31,26 +37,28 @@ public class AppController {
         return "login";
     }
 
-    @RequestMapping(value="/home", method={RequestMethod.GET, RequestMethod.POST})
-    public String home(User user, Model model){
+    @GetMapping(value="/home")
+    public String home(HttpServletRequest request){
         //model  contains the user attribute from the login redirect. how can we access this data?
-        System.out.println("does model object contain user: " + model.containsAttribute("user"));
-        System.out.println("username from user object: " + user.getUsername());
-        return "home";
+        Map<String, ?> inputFlashMap = RequestContextUtils.getInputFlashMap(request);
+        if (inputFlashMap != null) {
+            User user = (User) inputFlashMap.get("user");
+            return "home";
+        } else {
+            return "/";
+        }
     }
 
     @PostMapping("/login")
     //passing a user object as a parameter to this method allows us to access the user object from the login template
     //passing a model object allows us to add this same user object as a new attribute to be passed on during the redirect
-    public String login(User user, Model model){
-        System.out.println("hitting /login");
-        String username = user.getUsername();
-        System.out.println("new user is: " + username);
-        //user created during the form submission is now added as an attribute to the model, which will be passed to
-        //the home page during the redirect
-        model.addAttribute("user", user);
-        return "redirect:/home";
+    public RedirectView login(HttpServletRequest request,
+                        @ModelAttribute User user,
+                        RedirectAttributes redirectAttributes){
+            redirectAttributes.addFlashAttribute("user", user);
+            return new RedirectView("/home", true);
     }
+
 
     @GetMapping("/greeting")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
