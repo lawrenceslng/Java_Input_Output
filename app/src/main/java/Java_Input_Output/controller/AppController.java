@@ -12,37 +12,43 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map;
 
 @Controller
 public class AppController {
 
 
     @RequestMapping(value="/", method={RequestMethod.GET, RequestMethod.POST})
-    public String getApp(){
+    public String getApp(Model model){
 
         //from here, we want to access the different methods we have. Should these be their own methods within this app controller, or should
         //each different reader or writer have their own controller which handles getting the methods used for file conversion?
         //ex:
         //CsvReaderController.getRead();
         System.out.println("hitting /");
+        //adding a user attribute with a new user object into the model allows it to be accessible at the login template
+        model.addAttribute("user", new User());
         return "login";
     }
 
     @RequestMapping(value="/home", method={RequestMethod.GET, RequestMethod.POST})
-    public String home(@RequestParam(name="name", required = false, defaultValue = "User") String username, Model model){
-        System.out.println(username);
-        model.addAttribute("name", username);
+    public String home(User user, Model model){
+        //model  contains the user attribute from the login redirect. how can we access this data?
+        System.out.println("does model object contain user: " + model.containsAttribute("user"));
+        System.out.println("username from user object: " + user.getUsername());
         return "home";
     }
 
     @PostMapping("/login")
-    public String login(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model){
-        System.out.println(name);
-        model.addAttribute("name", name);
+    //passing a user object as a parameter to this method allows us to access the user object from the login template
+    //passing a model object allows us to add this same user object as a new attribute to be passed on during the redirect
+    public String login(User user, Model model){
         System.out.println("hitting /login");
-        User user = new User();
-        user.setUsername(name);
-        System.out.println("new user is: " + user.getUsername());
+        String username = user.getUsername();
+        System.out.println("new user is: " + username);
+        //user created during the form submission is now added as an attribute to the model, which will be passed to
+        //the home page during the redirect
+        model.addAttribute("user", user);
         return "redirect:/home";
     }
 

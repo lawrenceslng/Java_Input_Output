@@ -14,8 +14,9 @@
 </head>
 <body>
 <div layout:fragment="content">
-
-    <p th:text="'Hello, ' + ${name} + '!'" />
+    <!-- using user.username should theoretically allow us to access the user attribute from the model -->
+    <!-- this works when I do not perform a redirect to home after login, instead just doing `return "home"` -->
+    <p th:text="'Hello, ' + ${user.username} + '!'" />
     <p>This is the home page</p>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

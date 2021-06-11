@@ -30,9 +30,11 @@
     <div class="row login-module align-items-center">
         <div class="col">
             <div class="mb d-flex justify-content-center">
-                <form th:action="@{/login}" method="post" enctype="multipart/form-data">
-                    <label for="exampleFormControlInput1" class="form-label">Username</label>
-                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="User">
+                <!-- The user attribute is now accessible by using th:object -->
+                <form th:action="@{/login}" th:object="${user}" method="post" enctype="multipart/form-data">
+                    <label>Username</label>
+                    <!-- The username field can be populated within the user object using this form -->
+                    <input type="text" class="form-control" th:field="*{username}" name="username" placeholder="string" />
                     <br>
                     <button type="submit" class="btn btn-primary mb-3">Login</button>
                 </form>
