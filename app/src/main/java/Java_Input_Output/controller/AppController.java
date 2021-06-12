@@ -41,12 +41,21 @@ public class AppController {
     public String home(HttpServletRequest request){
         //model  contains the user attribute from the login redirect. how can we access this data?
         Map<String, ?> inputFlashMap = RequestContextUtils.getInputFlashMap(request);
+        System.out.println(inputFlashMap);
         if (inputFlashMap != null) {
             User user = (User) inputFlashMap.get("user");
             return "home";
         } else {
-            return "/";
+            return "redirect:/";
         }
+    }
+
+    @GetMapping("/login")
+    public String getAppRedirect(Model model) {
+        System.out.println("hitting /");
+        //adding a user attribute with a new user object into the model allows it to be accessible at the login template
+        model.addAttribute("user", new User());
+        return "login";
     }
 
     @PostMapping("/login")

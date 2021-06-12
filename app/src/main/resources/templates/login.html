@@ -10,6 +10,10 @@
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
           crossorigin="anonymous">
     <style>
+        body {
+            background-image: url(../assets/Images/what-the-hex.png);
+        }
+
         .login-module{
             margin: 150px 0;
             
@@ -23,13 +27,17 @@
         .mb{
             padding: 0 15%;
         }
+
+        form{
+
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row login-module align-items-center">
         <div class="col">
-            <div class="mb d-flex justify-content-center">
+            <div class="row mb d-flex justify-content-center align-items-center">
                 <!-- The user attribute is now accessible by using th:object -->
                 <form th:action="@{/login}" th:object="${user}" method="post" enctype="multipart/form-data">
                     <label>Username</label>
@@ -42,6 +50,7 @@
             </div>
         </div>
         <div class="col">
+            <img src="../assets/Images/nrd-D6Tu_L3chLE-unsplash.jpg" alt="grocery image" width="a" height="400">
         </div>
     </div>
 </div>
