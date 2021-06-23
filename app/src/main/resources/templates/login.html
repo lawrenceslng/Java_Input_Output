@@ -18,74 +18,56 @@
             margin: 150px 0;
 
         }
-        .col-md-6{
+        .form-col{
             border: 3px gray solid;
             border-radius: 15px;
-<!--            min-height: 400px;-->
+            /* height: 50vh; this is causing the login to not be centered in the div*/
             /* background-color: gray; */
         }
-        .mb{
-            padding: 0 15%;
-        }
 
-        .login-module .col{
+        .login-module .form-col{
             background-color: #f8f8ff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
         .imgbox {
+            border: 3px gray solid;
+            border-radius: 15px;
             display: grid;
             height: 100%;
         }
         .center-fit {
-            max-width: 100%;
-            max-height: 100vh;
+            max-width: 90%;
+            max-height: 90vh;
             margin: auto;
         }
 
-        div.form
-        {
-            display: block;
-            text-align: center;
-        }
-        form
-        {
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-        }
-        <!--not sure why this isn't working-->
-        @media only screen and (max-width: 1000px)
-        #imgbox {
-            display: none;
-        }
+<!--        form-->
+<!--        {-->
+<!--            display: inline-block;-->
+<!--            margin-left: 20%;-->
+<!--            margin-right: 10%;-->
+<!--            text-align: left;-->
+<!--        }-->
 }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="row login-module justify-content-center align-items-center">
-        <div class="col-md-6">
-<!--            <div class="row mb d-flex justify-content-center align-items-center">-->
-            <div class="form">
+<div class="container h-100">
+    <div class="row h-100 login-module justify-content-center align-items-center">
+        <div class="form-col col-md-6">
                 <!-- The user attribute is now accessible by using th:object -->
                 <form class="form-login" name="Form1" th:action="@{/login}" th:object="${user}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Username</label>
                         <!-- The username field can be populated within the user object using this form -->
-                        <input type="text" class="form-control" th:field="*{username}" name="username" placeholder="string" />
+                        <input type="text" class="form-control username" th:field="*{username}" name="username" placeholder="Username" />
                     </div>
                     <button type="submit" class="btn btn-primary mb-3">Login</button>
                 </form>
-            </div>
         </div>
         <!--hidden-md is bootstrap functionality. looks to work exactly at the px when columns would stack (767px)-->
-        <div class="col-md-6 hidden-md">
-            <div id="imgbox">
+        <div class="col col-md-6 hidden-md">
+            <div class="imgbox">
                 <img class="center-fit" src="../assets/Images/nrd-D6Tu_L3chLE-unsplash.jpg" alt="grocery image" width="a" height="400">
             </div>
         </div>
