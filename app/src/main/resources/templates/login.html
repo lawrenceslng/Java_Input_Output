@@ -14,11 +14,30 @@
             background-image: url(../assets/Images/what-the-hex.png);
         }
 
-        .login-module{
-            margin: 150px 0;
-
+        #main-container{
+            border: 3px red solid;
+            border-radius: 15px;
         }
-        .form-col{
+
+        #login-container{
+            margin: 150px 0;
+            border: 3px blue solid;
+            border-radius: 15px;
+        }
+
+        #login-col{
+            border: 3px yellow solid;
+            border-radius: 15px;
+        }
+
+        #form-container{
+            border: 3px green solid;
+            border-radius: 15px;
+            width:80%;
+            height:200px;
+        }
+
+        #image-col{
             border: 3px gray solid;
             border-radius: 15px;
             /* height: 50vh; this is causing the login to not be centered in the div*/
@@ -30,43 +49,37 @@
         }
 
         .imgbox {
-            border: 3px gray solid;
+            border: 3px purple solid;
             border-radius: 15px;
             display: grid;
             height: 100%;
         }
+
         .center-fit {
             max-width: 90%;
             max-height: 90vh;
             margin: auto;
         }
-
-<!--        form-->
-<!--        {-->
-<!--            display: inline-block;-->
-<!--            margin-left: 20%;-->
-<!--            margin-right: 10%;-->
-<!--            text-align: left;-->
-<!--        }-->
 }
     </style>
 </head>
 <body>
-<div class="container h-100">
-    <div class="row h-100 login-module justify-content-center align-items-center">
-        <div class="form-col col-md-6">
-                <!-- The user attribute is now accessible by using th:object -->
-                <form class="form-login" name="Form1" th:action="@{/login}" th:object="${user}" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label>Username</label>
-                        <!-- The username field can be populated within the user object using this form -->
-                        <input type="text" class="form-control username" th:field="*{username}" name="username" placeholder="Username" />
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-3">Login</button>
-                </form>
+
+<div id="main-container" class="container">
+    <div id="login-container" class="row justify-content-center align-items-center">
+        <div id="login-col" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <!-- The user attribute is now accessible by using th:object -->
+            <form id="form-container" class="form-login" name="Form1" th:action="@{/login}" th:object="${user}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Username</label>
+                    <!-- The username field can be populated within the user object using this form -->
+                    <input type="text" class="form-control username" th:field="*{username}" name="username" placeholder="Username" />
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Login</button>
+            </form>
         </div>
         <!--hidden-md is bootstrap functionality. looks to work exactly at the px when columns would stack (767px)-->
-        <div class="col col-md-6 hidden-md">
+        <div id="image-col" class="col-lg-6 col-md-6 d-none d-lg-block">
             <div class="imgbox">
                 <img class="center-fit" src="../assets/Images/nrd-D6Tu_L3chLE-unsplash.jpg" alt="grocery image" width="a" height="400">
             </div>
