@@ -15,6 +15,9 @@ Java_Input_Output/CsvReader.java
 Java_Input_Output/XmlReader.java
  Java_Input_Output.XmlReader
  Java_Input_Output.XmlReader$1
+Java_Input_Output/api/CheckoutResource.java
+ Java_Input_Output.api.CheckoutResource
+ Java_Input_Output.api.CheckoutResource$1
 Java_Input_Output/App.java
  Java_Input_Output.App
 Java_Input_Output/ReaderFile.java

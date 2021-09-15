@@ -3,6 +3,13 @@ package Java_Input_Output.controller;
 import Java_Input_Output.CsvReader;
 import Java_Input_Output.ShopItem;
 import Java_Input_Output.User;
+import com.adyen.Client;
+import com.adyen.enums.Environment;
+import com.adyen.model.Amount;
+import com.adyen.model.checkout.PaymentMethodsRequest;
+import com.adyen.model.checkout.PaymentMethodsResponse;
+import com.adyen.service.Checkout;
+import com.adyen.service.exception.ApiException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ConcurrentModel;
 import org.springframework.ui.Model;
@@ -132,6 +139,25 @@ public class AppController {
         file.transferTo(new File(baseDir + "test.csv"));
 
         return "redirect:/readCsv";
+    }
+
+    @GetMapping(value= "/preview")
+    public String preview(String type, Model model){
+        model.addAttribute("type", type);
+        return "preview";
+    }
+
+    @GetMapping(value= "/checkoutPage")
+    public String checkout(String type, String clientKey, Model model){
+        model.addAttribute("type", type);
+        model.addAttribute("clientKey", clientKey);
+        return "checkoutPage";
+    }
+
+    @GetMapping("/result/{type}")
+    public String result(@PathVariable String type, Model model) {
+        model.addAttribute("type", type);
+        return "result";
     }
 
 }

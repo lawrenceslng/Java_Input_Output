@@ -4,3 +4,6 @@
 
 # Ignore Gradle build output directory
 build
+
+#ignore application properties file
+application.properties
