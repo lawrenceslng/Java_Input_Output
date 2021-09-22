@@ -160,4 +160,16 @@ public class AppController {
         return "result";
     }
 
+    @GetMapping(value = "/items")
+    public String itemsPage(Model model){
+        return "items";
+    }
+
+    @PostMapping("/addItem")
+    public String addItem(@RequestParam("quantity") String quantity) {
+
+
+        return "items";
+    }
+
 }
